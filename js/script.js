@@ -12,17 +12,15 @@ arrayRandomNum.push(randomNum)
 console.log(arrayRandomNum);
 setTimeout(function() {
   output.innerHTML =  " ";
-}, 2000); 
+}, 5000); 
 output.innerHTML += randomNum + "-";
-
-
 }
 
 
 
 setTimeout(function() {
-  popUpMsg = prompt("Inserisci i numeri")
-  arrayNum = popUpMsg.split(',');
+  popUpMsg = prompt("Inserisci i numeri suddivisi da uno spazio")
+  arrayNum = popUpMsg.split(' ');
   let counter = 0
   for (let i = 0; i < arrayNum.length; i++) {
     
@@ -31,28 +29,17 @@ setTimeout(function() {
   }
   }
   if (counter === 5 ) {
-    console.log(`Bravo hai indovinato tutti i numeri, sei fortissimo!1!1`);
+    console.log(`Bravo hai indovinato tutti i numeri, sei fortissimo !1!1`);
+  }
+  else if(counter === 0){
+    console.log(`Mi spiace ma non E andata bene, 0 su 5`);
   }
   else{
     console.log(`bravo hai indovinato ${counter} su 5 numeri `);
   }
 
 console.log(arrayNum);
-},3000); 
-
-
-
-
-/*or (var i = 0; i < arrayNumStr.length; i++) {
-  arrayNum.push(parseInt(arrayNumStr[i]));*/
-
-
-
-
-
-
-
-
+},6000); 
 
 
 function uniqueRandomNum(blackList, min, max) {
