@@ -15,3 +15,5 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 - Attraverso il metodo  .split faró si che i numeri divisi da uno spazio verranno salvati come un array 
 
 - creo un counter che ad ogni numero scritto dall'utente incluso nella lista randomica aumenterá il suo valore di 1 e stampo i vari messagi 
+
+- creo un pulsante PLAY che al click generá i vari numeri randomici e resetta  lo score precedente 
