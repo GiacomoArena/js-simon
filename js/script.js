@@ -2,6 +2,7 @@
 const output = document.querySelector('#num');
 const button = document.querySelector('button');
 const result = document.getElementById('result')
+const timer = document.getElementById('timer')
 let blackList = []
 let randomNum ;
 let popUpMsg;
@@ -9,6 +10,13 @@ let arrayRandomNum = []
 let arrayNum = []
 //play button
 button.addEventListener('click', function(){
+  counter = 5;
+  startSetTimeout();
+  printCounter();
+
+  clock = setInterval(function() {
+    printCounter();
+  }, 1000)
   //reset h1
   result.innerHTML = "";
   //start numbers 
@@ -20,7 +28,8 @@ button.addEventListener('click', function(){
       output.innerHTML =  " ";
     }, 5000); 
     output.innerHTML += randomNum + "-";
-    }
+    } 
+
     
     
     //prompt
@@ -61,4 +70,15 @@ function uniqueRandomNum(blackList, min, max) {
   blackList.push(randomNumber);
 
   return randomNumber;
+}
+function startSetTimeout() {
+  setTimeout(function() {
+    clearInterval(clock); 
+    timer.innerHTML = " ";
+  }, 5000);
+} 
+
+function printCounter(){
+  timer.innerHTML ="Hai " + counter + " secondi";
+  counter--;
 }
